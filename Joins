@@ -1,0 +1,16 @@
+SELECT back_reader.Rname,  Reader.Rage FROM Reader
+INNER JOIN back_reader
+ON Reader.Rname = back_reader.Rname;
+SELECT Reader.Rname,Reader.Rmobile ,back_reader.Rage 
+FROM Reader
+LEFT JOIN back_reader 
+ON back_reader.Rname = Reader.Rname;
+SELECT Reader.Rname,Reader.Rmobile ,back_reader.Rage 
+FROM Reader
+RIGHT JOIN back_reader 
+ON back_reader.Rname = Reader.Rname;
+use BMS;
+SELECT Reader.Rage,Reader.Rmobile ,back_reader.Rage 
+FROM Reader
+FULL JOIN back_reader 
+ON back_reader.Rname = Reader.Rname;
